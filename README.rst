@@ -1,9 +1,13 @@
 UVVisPy
 =======
 
-UVVisPy is a Python framework for conveniently handling quantum-chemical calculations and the post-processing of the acquired data.
+UVVisPy is a Python package based on the ASpecD framework for processing and analysing optical spectra obtained using UVVis spectroscopy. It emphasises reproducibility and good scientific practice.
 
 For more general information on UVVisPy see its `homepage <https://www.uvvispy.de/>`_.
+
+
+.. warning::
+  The UVVisPy package is currently under active development and still considered in Alpha development state. Therefore, expect frequent changes in features and public APIs that may break your own code. Nevertheless, feedback as well as feature requests are highly welcome.
 
 
 Installation
