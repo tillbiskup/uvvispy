@@ -47,13 +47,7 @@ A general overview of the overall package structure::
   docs/
       api/
   uvvispy/
-      datasafe/
-      loi/
-      eln/
   tests/
-      datasafe/
-      loi/
-      eln/
 
 
 As you can see, currently three subpackages, namely "datasafe", "loi", and "eln", are supposed to be created. For details of the UVVisPy project as such, consult its `Homepage <https://www.uvvispy.de/>`_.
