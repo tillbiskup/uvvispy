@@ -25,7 +25,7 @@ with open(os.path.join(os.path.dirname(__file__), '..', 'VERSION')) as \
         version_file:
     release_ = version_file.read().strip()
 
-project = 'uvvispy'
+project = 'UVVisPy'
 copyright = '2019, Till Biskup'
 author = 'Till Biskup'
 

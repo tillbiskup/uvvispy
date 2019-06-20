@@ -1,7 +1,7 @@
 UVVisPy
 =======
 
-UVVisPy is a Python package based on the ASpecD framework for processing and analysing optical spectra obtained using UVVis spectroscopy. It emphasises reproducibility and good scientific practice.
+UVVisPy is a Python package based on the `ASpecD framework <https://www.aspecd.de/>`_ for processing and analysing optical spectra obtained using UVVis spectroscopy. It emphasises reproducibility and good scientific practice.
 
 For more general information on UVVisPy see its `homepage <https://www.uvvispy.de/>`_.
 

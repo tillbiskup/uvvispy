@@ -7,7 +7,7 @@ This is the definite source of information for developers, besides having a look
 Module contents
 ---------------
 
-.. automodule:: qcpy
+.. automodule:: uvvispy
     :members:
     :undoc-members:
     :show-inheritance:
