@@ -70,3 +70,8 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+
+A note on the logo
+------------------
+
+The snake (a python) forms a prism that diffracts the incoming light. The copyright of the logo belongs to J. Popp.

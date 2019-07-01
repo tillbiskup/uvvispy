@@ -81,12 +81,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 # Autodoc configuration
-autodoc_default_flags = [
-    'members',
-    'undoc-members',
-    'show-inheritance',
-    'private-members',
-]
+autodoc_default_options = {
+    'members': True,
+    'member-order': 'bysource',
+    'undoc-members': True,
+    'show-inheritance': True,
+}
 
 # -- Options for HTML output -------------------------------------------------
 
