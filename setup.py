@@ -10,7 +10,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
 setuptools.setup(
     name='uvvispy',
     version=version,
-    description='Framework for handling quantum-chemical calculations.',
+    description='Package for handling optical absorption data.',
     long_description=readme,
     long_description_content_type='text/x-rst',
     author='Till Biskup',
