@@ -4,7 +4,7 @@ Metadata
 
 Metadata are an essential concept of the `ASpecD framework <https://docs.aspecd.de/>`_ and hence the UVVisPy package. They consist of all the relevant information accompanying a UVVis measurement.
 
-Metadata are stored outside the UVVisPy package in simple yet structured text files that focus on human readability and writability, while retaining machine readability.
+Metadata are stored outside the UVVisPy package in simple yet structured text files that focus on human readability and writability, while retaining machine readability. Think of them as forms helping you to remember which pieces of information to write down during measurement, whithout needing to think about it. This allows you to fully focus on the measurement and the science behind.
 
 
 .. note::
@@ -21,9 +21,9 @@ Due to its widespread use and because it is easy to write (for human beings!), t
     ---
     format:
       type: UV/vis metadata
-      version: 0.1.3
+      version: 0.1.4
 
-    general:
+    measurement:
       start:
         date: 2018-05-13
         time: 11:05:00
@@ -67,7 +67,9 @@ Due to its widespread use and because it is easy to write (for human beings!), t
       export: ASCII
 
     comment: |
-      And here some comment - with free text. And as YAML allows for using UTF8 characters, you can use special characters too, such as the nasty German "umlauts": äöü
+      And here some comment - with free text. And as YAML allows for
+      using UTF8 characters, you can use special characters too,
+      such as the nasty German "umlauts": äöü
 
       Even empty lines are allowed, as long as each line is indented.
 

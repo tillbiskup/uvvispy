@@ -68,3 +68,19 @@ Developing the UVVisPy code should be done test-driven wherever possible. The te
 
 Tests should be written using the Python :mod:`unittest` framework. Make sure that tests are independent of the respective local environment and clean up afterwards (using appropriate ``teardown`` methods).
 
+
+Static code analysis with Prospector
+------------------------------------
+
+Static code analysis can be performed using `Prospector <http://prospector.landscape.io/en/master/>`_. First, install the necessary tools into the virtual environment created for the ASpecD framework::
+
+    pip install prospector[with_pyroma]
+
+The optional arguments ensure that all necessary dependencies are installed as well.
+
+Afterwards, simply run Prospector from a terminal from within your project root::
+
+    prospector
+
+It will display the results of the static code analysis within the terminal. Settings can be changed in the ``.prospector.yaml`` file in the project root, but please be very careful changing settings here. Often, it is better to (temporarily) silence warnings in the code itself.
+

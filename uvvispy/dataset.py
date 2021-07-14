@@ -1,0 +1,70 @@
+"""
+Datasets: units containing data and metadata.
+
+The dataset is one key concept of the ASpecD framework and hence the UVVisPy
+package derived from it, consisting of the data as well as the corresponding
+metadata. Storing metadata in a structured way is a prerequisite for a
+semantic understanding within the routines. Furthermore, a history of every
+processing, analysis and annotation step is recorded as well, aiming at a
+maximum of reproducibility. This is part of how the ASpecD framework and
+therefore the UVVisPy package tries to support good scientific practice.
+
+Therefore, each processing and analysis step of data should always be
+performed using the respective methods of a dataset, at least as long as it
+can be performed on a single dataset.
+
+Datasets
+========
+
+Generally, there are two types of datasets: Those containing experimental
+data and those containing calculated data. Therefore, two corresponding
+subclasses exist:
+
+  * :class:`uvvispy.dataset.ExperimentalDataset`
+  * :class:`uvvispy.dataset.CalculatedDataset`
+
+
+Dataset factory
+===============
+
+Particularly in case of recipe-driven data analysis (c.f. :mod:`aspecd.tasks`),
+there is a need to automatically retrieve datasets using nothing more than a
+source string that can be, e.g., a path or LOI. This is where the
+DatasetFactory comes in. This is a factory in the sense of the factory
+pattern described by the "Gang of Four" in their seminal work, "Design
+Patterns" (Gamma et al., 1995):
+
+  * :class:`uvvispy.dataset.DatasetFactory`
+
+
+Module documentation
+====================
+"""
+
+import aspecd.dataset
+import aspecd.metadata
+
+import uvvispy.metadata
+
+
+class ExperimentalDataset(aspecd.dataset.ExperimentalDataset):
+    """Set of data uniting all relevant information.
+
+    The unity of numerical and metadata is indispensable for the
+    reproducibility of data and is possible by saving all information available
+    for one set of measurement data in a single instance of this class.
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.metadata = uvvispy.metadata.ExperimentalDatasetMetadata()
+
+
+class CalculatedDataset(aspecd.dataset.CalculatedDataset):
+    """Entity consisting of calculated data and metadata.
+
+    As the class is fully inherited from ASpecD for simple usage, see the
+    ASpecD documentation of the :class:`aspecd.dataset.CalculatedDataset`
+    class for details.
+
+    """
