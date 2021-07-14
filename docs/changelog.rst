@@ -17,7 +17,7 @@ Not yet released
 
 
 Version 0.1.0.dev6
-=============
+==================
 
 Released 2019-09-26
 
