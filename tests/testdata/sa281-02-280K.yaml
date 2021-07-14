@@ -1,0 +1,50 @@
+---
+format:
+  type: UV/vis metadata
+  version: 0.1.4
+
+measurement:
+  start:
+    date: 2017-09-06
+    time: 08:31:00
+  end:
+    date: 2017-09-06
+    time: 08:32:00
+  operator: John Doe
+  purpose: temperature dependence
+  labbook: loi:42.1001/lj/tb/uvvis/2017-09-06_644
+
+sample:
+  name: DPPTh2
+  id: 281
+  solvent: toluene
+  concentration: 0.3 mg/ml
+  preparation: batch 180 diluted 1:10
+
+cell:
+  manufacturer: Hellma
+  type: 100-QS
+  pathlength: 1 mm
+
+temperature:
+  controlled: True
+  temperature: 280 K
+  controller: Oxford MercuryITC
+  cryostat: Oxford Optistat DN2
+  cryogen: LN2
+
+experiment:
+  type: Spectrum
+  measurement mode: Absorption
+
+spectrometer:
+  manufacturer: Shimadzu
+  model: UV-1601PC
+  software: UV Probe, Version 2.43
+
+data format:
+  raw: Shimadzu SPC
+  export: ASCII
+
+comment: |
+  Worked quite well

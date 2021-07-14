@@ -1,4 +1,5 @@
-"""Metadata.
+"""
+Metadata: crucial information about the numerical data.
 
 Metadata
 ========

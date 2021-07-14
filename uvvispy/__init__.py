@@ -10,4 +10,7 @@ Available modules
 :mod:`uvvispy.metadata`
     Metadata contained in the datasets
 
+:mod:`uvvispy.io`
+    Import and export data into and from datasets
+
 """

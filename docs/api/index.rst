@@ -9,6 +9,7 @@ This is the definite source of information for developers, besides having a look
 
    uvvispy.dataset
    uvvispy.metadata
+   uvvispy.io
 
 
 Module contents

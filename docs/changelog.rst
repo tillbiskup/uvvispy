@@ -11,3 +11,14 @@ Version 0.1.0
 Not yet released
 
 * First public release
+* Based on ASpecD v.0.x.y
+* Importer for Shimadzu ASCII export format
+* Recipe-driven data analysis
+
+
+Version 0.1.0.dev6
+=============
+
+Released 2019-09-26
+
+* First public pre-release on PyPI
