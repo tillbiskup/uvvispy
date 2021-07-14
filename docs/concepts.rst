@@ -2,7 +2,7 @@
 Concepts
 ========
 
-The UVVisPy package is based on the `ASpecD framework <https://www.aspecd.de/>`_, aiming at complete reproducibility---and whereever possible replicability---of data acquisition, processing, and analysis.
+The UVVisPy package is based on the `ASpecD framework <https://www.aspecd.de/>`_, aiming at complete reproducibility---and wherever possible replicability---of data acquisition, processing, and analysis.
 
 
 Dataset
@@ -73,3 +73,11 @@ Tasks
 Processing data consists of lots of different single tasks that can mostly be automated. This is the idea behind recipe-driven data analysis: lists of datasets and tasks that can easily be created by a user and processed fully automated. "Tasks" has a broad meaning here, including basically every automatable aspect of data analysis, including processing and analysis steps, creating representations and annotations, and finally reports.
 
 Recipe-driven data analysis is carried out fully unattended (non-interactive). This allows to use it in context of separate hardware and a scheduling system. Situations particularly benefiting from this approach are many datasets that need to be processed all in the same way.
+
+
+Models
+======
+
+*Mathematical models used to describe spectroscopic data.*
+
+To make sense of and to interpret the physical reality reflected in numerical data, usually mathematical models are used. These models usually depend on a number of parameters that may or may not be adjustable to fit the actual data. Models can therefore be seen as abstraction to simulations in some regard. In this respect, they play a central role in conjunction with fitting models to data by adjusting their respective parameters, a quite general approach in science and particularly in spectroscopy.
