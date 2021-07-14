@@ -7,6 +7,10 @@ format:
 map 1:
   metadata file versions:
     - 0.1.4
+  rename key:
+    - old key: labbook
+      new key: labbook_entry
+      in dict: measurement
 
 map 2:
   metadata file versions:
@@ -16,3 +20,6 @@ map 2:
     - old key: general
       new key: measurement
       in dict:
+    - old key: labbook
+      new key: labbook_entry
+      in dict: measurement

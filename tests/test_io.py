@@ -36,7 +36,8 @@ class TestDatasetImporter(unittest.TestCase):
     def test_import_reads_metadata_if_present(self):
         metadata_dict = {
             'format': {'version': '0.1.4'},
-            'experiment': {'type': 'spectrum'}
+            'experiment': {'type': 'spectrum'},
+            'measurement': {'labbook': ''},
         }
         self._write_metadata_file(metadata_dict)
         self.importer.source = self.dataset_file
@@ -48,7 +49,8 @@ class TestDatasetImporter(unittest.TestCase):
         metadata_dict = {
             'format': {'version': '0.1.4'},
             'measurement': {'start': {'date': '2018-05-13',
-                                      'time': '11:05:00'}}
+                                      'time': '11:05:00'},
+                            'labbook': ''}
         }
         self._write_metadata_file(metadata_dict)
         self.importer.source = self.dataset_file
@@ -64,13 +66,36 @@ class TestDatasetImporter(unittest.TestCase):
     def test_import_maps_metadata_from_old_format(self):
         metadata_dict = {
             'format': {'version': '0.1.3'},
-            'general': {'operator': 'John Doe'}
+            'general': {'operator': 'John Doe',
+                        'labbook': ''}
         }
         self._write_metadata_file(metadata_dict)
         self.importer.source = self.dataset_file
         self.dataset.import_from(self.importer)
         self.assertEqual(metadata_dict["general"]["operator"],
                          self.dataset.metadata.measurement.operator)
+
+    def test_import_maps_labbook_entry(self):
+        metadata_dict = {
+            'format': {'version': '0.1.4'},
+            'measurement': {'labbook': 'loi:42.1001/lb/tb/uvvis/yyyy-mm-dd_id'}
+        }
+        self._write_metadata_file(metadata_dict)
+        self.importer.source = self.dataset_file
+        self.dataset.import_from(self.importer)
+        self.assertEqual(metadata_dict["measurement"]["labbook"],
+                         self.dataset.metadata.measurement.labbook_entry)
+
+    def test_import_maps_labbook_entry_in_old_format(self):
+        metadata_dict = {
+            'format': {'version': '0.1.3'},
+            'general': {'labbook': 'loi:42.1001/lb/tb/uvvis/yyyy-mm-dd_id'}
+        }
+        self._write_metadata_file(metadata_dict)
+        self.importer.source = self.dataset_file
+        self.dataset.import_from(self.importer)
+        self.assertEqual(metadata_dict["general"]["labbook"],
+                         self.dataset.metadata.measurement.labbook_entry)
 
 
 class TestShimadzuASCIIImporter(unittest.TestCase):
@@ -128,7 +153,8 @@ class TestShimadzuASCIIImporter(unittest.TestCase):
         self._write_dataset_file()
         metadata_dict = {
             'format': {'version': '0.1.4'},
-            'experiment': {'type': 'spectrum'}
+            'experiment': {'type': 'spectrum'},
+            'measurement': {'labbook': ''},
         }
         self._write_metadata_file(metadata_dict)
         self.importer.source = self.dataset_file

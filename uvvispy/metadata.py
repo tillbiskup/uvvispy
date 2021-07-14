@@ -60,9 +60,55 @@ class ExperimentalDatasetMetadata(aspecd.metadata.ExperimentalDatasetMetadata):
 
     def __init__(self):
         super().__init__()
+        self.sample = Sample()
+        self.temperature_control = TemperatureControl()
         self.cell = Cell()
         self.experiment = Experiment()
         self.spectrometer = Spectrometer()
+
+
+class Sample(aspecd.metadata.Sample):
+    """Metadata corresponding to the sample measured.
+
+    Attributes
+    ----------
+    solvent : :class:`str`
+        Solvent used.
+
+    concentration : :class:`aspecd.metadata.PhysicalQuantity`
+        Type of the cell as given by the manufacturer.
+
+    preparation : :class:`str`
+        Details on the preparation of the sample (concise!)
+
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.solvent = ''
+        self.concentration = aspecd.metadata.PhysicalQuantity()
+        self.preparation = ''
+
+
+class TemperatureControl(aspecd.metadata.TemperatureControl):
+    """Metadata corresponding to the temperature control.
+
+    Attributes
+    ----------
+    cryostat : :class:`str`
+        Type of the cryostat used (as given by the manufacturer).
+
+    cryogen : :class:`str`
+        Type of cryogen.
+
+        Typical values are "LN2", "LHe"
+
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.cryostat = ''
+        self.cryogen = ''
 
 
 class Cell(aspecd.metadata.Metadata):

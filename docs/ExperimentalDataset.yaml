@@ -32,6 +32,13 @@ metadata:
     name: ''
     id: null
     loi: ''
+    solvent: ''
+    concentration:
+      unit: ''
+      dimension: ''
+      name: ''
+      value: 0.0
+    preparation: ''
   temperature_control:
     temperature:
       unit: ''
@@ -39,10 +46,16 @@ metadata:
       name: ''
       value: 0.0
     controller: ''
+    cryostat: ''
+    cryogen: ''
   cell:
     manufacturer: ''
     type: ''
-    pathlength: ''
+    pathlength:
+      unit: ''
+      dimension: ''
+      name: ''
+      value: 0.0
   experiment:
     type: ''
     measurement_mode: ''
