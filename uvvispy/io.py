@@ -39,8 +39,8 @@ class DatasetImporter(aspecd.io.DatasetImporter):
     software.
     """
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, source=None):
+        super().__init__(source=source)
         self._metadata = dict()
 
     def _import(self):
@@ -112,8 +112,8 @@ class ShimadzuASCIIImporter(DatasetImporter):
 
     """
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, source=None):
+        super().__init__(source=source)
         self.extension = '.txt'
         self.parameters["skiprows"] = 2
 
@@ -161,5 +161,5 @@ class DatasetImporterFactory(aspecd.io.DatasetImporterFactory):
     def _get_importer(self):
         importer = DatasetImporter()
         if self.source.endswith(".txt"):
-            importer = ShimadzuASCIIImporter()
+            importer = ShimadzuASCIIImporter(source=self.source)
         return importer

@@ -44,6 +44,7 @@ Module documentation
 import aspecd.dataset
 import aspecd.metadata
 
+import uvvispy.io
 import uvvispy.metadata
 
 
@@ -68,3 +69,47 @@ class CalculatedDataset(aspecd.dataset.CalculatedDataset):
     class for details.
 
     """
+
+
+class DatasetFactory(aspecd.dataset.DatasetFactory):
+    """
+    Factory for creating dataset objects based on the source provided.
+
+    Particularly in case of recipe-driven data analysis (c.f.
+    :mod:`aspecd.tasks`), there is a need to automatically retrieve datasets
+    using nothing more than a source string that can be, e.g., a path or LOI.
+
+    The DatasetFactory operates in conjunction with a
+    :class:`uvvispy.io.factory.DatasetImporterFactory` to import the actual
+    dataset. See the respective class documentation for more details.
+
+
+    Attributes
+    ----------
+    importer_factory : :class:`uvvispy.io.factory.DatasetImporterFactory`
+        ImporterFactory instance used for importing datasets
+
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.importer_factory = uvvispy.io.DatasetImporterFactory()
+
+    @staticmethod
+    def _create_dataset(source=''):
+        """Return uvvispy dataset.
+
+        Parameters
+        ----------
+        source : :class:`str`
+            string describing the source of the dataset
+
+            May be a filename or path, a URL/URI, a LOI, or similar
+
+        Returns
+        -------
+        dataset : :class:`uvvispy.dataset.ExperimentalDataset`
+            Dataset object for uvvispy package
+
+        """
+        return uvvispy.dataset.ExperimentalDataset()
