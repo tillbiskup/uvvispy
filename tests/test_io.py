@@ -97,6 +97,19 @@ class TestDatasetImporter(unittest.TestCase):
         self.assertEqual(metadata_dict["general"]["labbook"],
                          self.dataset.metadata.measurement.labbook_entry)
 
+    def test_import_assigns_comment_as_annotation(self):
+        metadata_dict = {
+            'format': {'version': '0.1.4'},
+            'measurement': {'labbook': 'loi:42.1001/lb/tb/uvvis/yyyy-mm-dd_id'},
+            'comment': 'Lorem ipsum dolor sit amet'
+        }
+        self._write_metadata_file(metadata_dict)
+        self.importer.source = self.dataset_file
+        self.dataset.import_from(self.importer)
+        self.assertEqual(metadata_dict["comment"],
+                         self.dataset.annotations[0].annotation.content[
+                             "comment"])
+
 
 class TestShimadzuASCIIImporter(unittest.TestCase):
 

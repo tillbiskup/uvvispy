@@ -14,6 +14,7 @@ specific dataset depending on the information provided (usually, a filename).
 import io
 import os
 
+import aspecd.annotation
 import aspecd.io
 import aspecd.metadata
 import aspecd.utils
@@ -51,6 +52,7 @@ class DatasetImporter(aspecd.io.DatasetImporter):
         if os.path.exists(metadata_filename):
             self._import_metadata(metadata_filename)
             self._map_metadata()
+            self._add_comment_as_annotation()
         self.dataset.metadata.from_dict(self._metadata)
 
     def _import_metadata(self, filename):
@@ -67,6 +69,12 @@ class DatasetImporter(aspecd.io.DatasetImporter):
                                               'metadata_mapper.yaml')
         mapper.map()
         self._metadata = mapper.metadata
+
+    def _add_comment_as_annotation(self):
+        if "comment" in self._metadata:
+            annotation = aspecd.annotation.Comment()
+            annotation.comment = self._metadata["comment"]
+            self.dataset.annotate(annotation)
 
 
 class ShimadzuASCIIImporter(DatasetImporter):
