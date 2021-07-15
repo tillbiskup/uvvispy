@@ -13,7 +13,9 @@ Not yet released
 * First public release
 * Based on ASpecD v.0.2.2
 * Importer for Shimadzu ASCII export format
-* Recipe-driven data analysis
+* Series of generic processing and analysis steps
+* Series of generic plotters
+* Recipe-driven data analysis: simple user interface with no programming required
 
 
 Version 0.1.0.dev6

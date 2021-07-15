@@ -18,6 +18,8 @@ For later versions
 
 * Support for more raw data file formats
 
+* Inherit models from ASpecD (requires ASpecD 0.3.0)
+
 
 Todos
 =====
