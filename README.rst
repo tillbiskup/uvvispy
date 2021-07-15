@@ -28,7 +28,7 @@ What is even better: Actual data processing and analysis **no longer requires pr
             - first-dataset.pdf
             - second-dataset.pdf
 
-For more general information on the UVVisPy package and for how to use it, see its `documentation <https://doc.uvvispy.de/>`_.
+For more general information on the UVVisPy package and for how to use it, see its `documentation <https://docs.uvvispy.de/>`_.
 
 
 Features
