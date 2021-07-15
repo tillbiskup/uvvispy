@@ -16,4 +16,7 @@ Available modules
 :mod:`uvvispy.processing`
     Processing steps operating on datasets
 
+:mod:`uvvispy.analysis`
+    Analysis steps operating on datasets
+
 """

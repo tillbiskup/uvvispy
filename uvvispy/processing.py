@@ -119,7 +119,7 @@ class BaselineCorrection(aspecd.processing.BaselineCorrection):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In the simplest case, just invoke the baseline correction with default
     values:
@@ -167,7 +167,7 @@ class Normalisation(aspecd.processing.Normalisation):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
 
     In the simplest case, just invoke the normalisation with default values:
@@ -232,7 +232,7 @@ class ScalarAlgebra(aspecd.processing.ScalarAlgebra):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In case you would like to add a fixed value of 42 to your dataset:
 
@@ -264,7 +264,7 @@ class ScalarAxisAlgebra(aspecd.processing.ScalarAxisAlgebra):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In case you would like to add a fixed value of 42 to the first axis
     (index 0) your dataset:
@@ -298,7 +298,7 @@ class DatasetAlgebra(aspecd.processing.DatasetAlgebra):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In case you would like to add the data of the dataset referred to by its
     label ``label_to_other_dataset`` to your dataset:
@@ -352,7 +352,7 @@ class RangeExtraction(aspecd.processing.RangeExtraction):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In the simplest case, just invoke the range extraction with one range
     only, assuming a 1D dataset:
@@ -444,7 +444,7 @@ class CommonRangeExtraction(aspecd.processing.CommonRangeExtraction):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     In case you would like to bring all datasets currently loaded into your
     recipe to a common range (use with caution, however), things can be as
@@ -515,7 +515,7 @@ class Interpolation(aspecd.processing.Interpolation):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     Generally, interpolating requires to provide both, a range and a number
     of points:
@@ -562,7 +562,7 @@ class Filtering(aspecd.processing.Filtering):
     For convenience, a series of examples in recipe style (for details of
     the recipe-driven data analysis, see :mod:`aspecd.tasks`) is given below
     for how to make use of this class. The examples focus each on a single
-    aspecd.
+    aspect.
 
     Generally, filtering requires to provide both, a type of filter and a
     window length. Therefore, for uniform and Gaussian filters, this would be:

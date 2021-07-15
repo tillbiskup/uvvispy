@@ -10,17 +10,12 @@ import importlib
 import os
 
 
-class CreateProcessingStepClasses:
+class CreateClasses:
 
     def __init__(self):
         self.package = 'uvvispy'
-        self.module = 'processing'
-        self.classes = [
-            'BaselineCorrection', 'Normalisation', 'ScalarAlgebra',
-            'ScalarAxisAlgebra', 'DatasetAlgebra', 'RangeExtraction',
-            'CommonRangeExtraction', 'Interpolation', 'Filtering', 'Noise',
-            'ChangeAxesValues',
-        ]
+        self.module = ''
+        self.classes = []
 
     def create_module(self):
         module_filename = self.module + '.py'
@@ -35,10 +30,18 @@ class CreateProcessingStepClasses:
                         and not hasattr(package_module, class_name):
                     self._class_stub(class_name, file)
 
+    def _module_head(self, module_filename):
+        print("Create file '" + module_filename + "'")
+        with open(module_filename, 'w+') as file:
+            file.write('"""' + self.module.capitalize() + '.\n\n')
+            file.write('And here some more documentation...\n')
+            file.write('"""\n\n')
+            file.write('import aspecd.' + self.module + '\n')
+
     def _class_stub(self, class_name, file):
         print("Create scaffold for class '" + class_name + "'")
         file.write('\n\n' + 'class ' + class_name +
-                   '(aspecd.processing.' + class_name + '):' + '\n')
+                   '(aspecd.' + self.module + '.' + class_name + '):' + '\n')
         file.write('    """<one line of description>.' + '\n\n')
         file.write('    As the class is fully inherited from ASpecD ' +
                    'for simple usage, see the\n' +
@@ -54,7 +57,7 @@ class CreateProcessingStepClasses:
                    ':mod:`aspecd.tasks`) is given below\n' +
                    '    for how to make use of this class. The examples ' +
                    'focus each on a single\n' +
-                   '    aspecd.\n\n' +
+                   '    aspect.\n\n' +
                    '    Some description here...\n\n' +
                    '    .. code-block:: yaml\n\n' +
                    '        - kind: ' + self.module + '\n'
@@ -62,10 +65,31 @@ class CreateProcessingStepClasses:
                    )
         file.write('    """' + '\n')
 
-    def _module_head(self, module_filename):
-        print("Create file")
-        with open(module_filename, 'w+') as file:
-            file.write('"""' + self.module.capitalize() + '.\n\n')
-            file.write('And here some more documentation...\n')
-            file.write('"""\n\n')
-            file.write('import aspecd.' + self.module + '\n')
+
+class CreateProcessingStepClasses(CreateClasses):
+
+    def __init__(self):
+        super().__init__()
+        self.module = 'processing'
+        self.classes = [
+            'BaselineCorrection', 'Normalisation', 'ScalarAlgebra',
+            'ScalarAxisAlgebra', 'DatasetAlgebra', 'RangeExtraction',
+            'CommonRangeExtraction', 'Interpolation', 'Filtering', 'Noise',
+            'ChangeAxesValues',
+        ]
+
+
+class CreateAnalysisStepClasses(CreateClasses):
+
+    def __init__(self):
+        super().__init__()
+        self.module = 'analysis'
+        self.classes = [
+            'BasicCharacteristics', 'BasicStatistics', 'BlindSNREstimation',
+            'PeakFinding',
+        ]
+
+
+if __name__ == "__main__":
+    creator = CreateAnalysisStepClasses()
+    creator.create_module()
