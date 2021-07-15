@@ -41,7 +41,7 @@ Interested in more real-live examples? Check out the :doc:`use cases section <us
 Features
 ========
 
-A list of features, not all implemented yet but aimed at for the first public release (uvvispy 0.1):
+A list of features:
 
 * fully reproducible processing and analysis of UVVis data
 

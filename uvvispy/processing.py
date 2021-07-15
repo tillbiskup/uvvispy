@@ -19,7 +19,7 @@ Processing steps implemented
 ============================
 
 The processing steps implemented in this module can be separated into those
-specific for cw-EPR data and those that are generally applicable and were
+specific for UVVis data and those that are generally applicable and were
 inherited from the ASpecD framework.
 
 
