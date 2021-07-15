@@ -8,6 +8,12 @@ A few ideas how to develop the project further, currently a list as a reminder f
 For version 0.1
 ===============
 
+* Change ShimadzuASCIIImporter to only use np.genfromtxt?
+
+* Sphinx-Multiversion
+
+* tox runs
+
 
 For later versions
 ==================
