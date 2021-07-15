@@ -8,7 +8,7 @@ This page contains a summary of changes between the official UVVisPy releases. O
 Version 0.1.0
 =============
 
-Not yet released
+Released 2021-07-15
 
 * First public release
 * Based on ASpecD v.0.2.2
