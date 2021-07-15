@@ -1,6 +1,8 @@
 import importlib
 import unittest
 
+import aspecd.processing
+
 import uvvispy.processing
 
 
@@ -8,16 +10,24 @@ class TestProcessingStepsFromAspecd(unittest.TestCase):
 
     def setUp(self):
         self.classes = [
-            'Normalisation', 'Integration', 'Differentiation',
-            'ScalarAlgebra', 'Projection', 'SliceExtraction',
-            'RangeExtraction', 'BaselineCorrection ', 'Averaging',
-            'ScalarAxisAlgebra', 'DatasetAlgebra', 'Interpolation',
-            'Filtering', 'CommonRangeExtraction', 'Noise',
+            'BaselineCorrection', 'Normalisation', 'ScalarAlgebra',
+            'ScalarAxisAlgebra', 'DatasetAlgebra', 'RangeExtraction',
+            'CommonRangeExtraction', 'Interpolation', 'Filtering', 'Noise',
             'ChangeAxesValues',
         ]
 
     def test_classes_exist(self):
         module = importlib.import_module('uvvispy.processing')
-        for classname in self.classes:
-            with self.subTest(classname=classname):
-                getattr(module, classname)
+        for class_name in self.classes:
+            with self.subTest(classname=class_name):
+                if hasattr(aspecd.processing, class_name):
+                    getattr(module, class_name)
+
+    def test_classes_have_correct_type(self):
+        module = importlib.import_module('uvvispy.processing')
+        for class_name in self.classes:
+            with self.subTest(classname=class_name):
+                if hasattr(aspecd.processing, class_name):
+                    aspecd_type = getattr(aspecd.processing, class_name)
+                    obj = getattr(module, class_name)()
+                    self.assertTrue(isinstance(obj, aspecd_type))
