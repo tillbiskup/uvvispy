@@ -133,9 +133,10 @@ class ShimadzuASCIIImporter(DatasetImporter):
     def _read_data(self):
         with open(self.source) as file:
             contents = file.read()
+        # noinspection PyTypeChecker
         raw_data = \
-            np.genfromtxt(io.BytesIO(contents.replace(',', '.').encode()),
-                          skip_header=self.parameters["skiprows"])
+            np.loadtxt(io.StringIO(contents.replace(',', '.')),
+                       skiprows=self.parameters["skiprows"])
         self.dataset.data.axes[0].values = raw_data[:, 0]
         self.dataset.data.data = raw_data[:, 1]
 

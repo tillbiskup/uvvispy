@@ -69,6 +69,31 @@ Developing the UVVisPy code should be done test-driven wherever possible. The te
 Tests should be written using the Python :mod:`unittest` framework. Make sure that tests are independent of the respective local environment and clean up afterwards (using appropriate ``teardown`` methods).
 
 
+Setting up the documentation build system
+-----------------------------------------
+
+The documentation is built using `Sphinx <https://sphinx-doc.org/>`_, `Python <https://python.org/>`_. Building requires using a shell, for example ``bash``.
+
+
+To install the necessary Python dependencies, create a virtual environment, e.g., with ``virtualenv <environment>``, and activate it afterwards with ``<environment>/bin/activate``. Then install the dependencies using ``pip``::
+
+    pip install sphinx
+    pip install sphinx-rtd-theme
+    pip install sphinx-multiversion
+
+
+To build the documentation:
+
+  * Activate the virtual environment where the necessary dependencies are installed in.
+  * ``cd`` to ``docs/``, then run ``make html``. (To clean previously built documentation, run ``make clean`` first).
+
+
+To build the documentation for all releases and the current master branch:
+
+  * Activate the virtual environment where the necessary dependencies are installed in.
+  * ``cd`` to ``docs/``, then run ``make multiversion``. (To clean previously built documentation, run ``make clean`` first).
+
+
 Static code analysis with Prospector
 ------------------------------------
 
