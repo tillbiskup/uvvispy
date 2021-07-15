@@ -13,4 +13,7 @@ Available modules
 :mod:`uvvispy.io`
     Import and export data into and from datasets
 
+:mod:`uvvispy.processing`
+    Processing steps operating on datasets
+
 """
