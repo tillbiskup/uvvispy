@@ -46,7 +46,7 @@ setuptools.setup(
         "Topic :: Scientific/Engineering",
     ],
     install_requires=[
-        'aspecd',
+        'aspecd>=0.2.2',
     ],
     extras_require={
         'dev': ['prospector'],

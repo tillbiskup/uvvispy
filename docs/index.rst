@@ -1,6 +1,6 @@
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg
-   :target: https://doi.org/10.5281/zenodo.xxxxxxx
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5106817.svg
+   :target: https://doi.org/10.5281/zenodo.5106817
    :align: right
 
 =====================
@@ -73,12 +73,12 @@ How to cite
 
 UVVisPy is free software. However, if you use UVVisPy for your own research, please cite it appropriately:
 
-Till Biskup. UVVisPy (2021). `doi:10.5281/zenodo.xxxxxxx <https://doi.org/10.5281/zenodo.xxxxxxx>`_
+Till Biskup. UVVisPy (2021). `doi:10.5281/zenodo.5106817 <https://doi.org/10.5281/zenodo.5106817>`_
 
-To make things easier, UVVisPy has a `DOI <https://doi.org/10.5281/zenodo.xxxxxxx>`_ provided by `Zenodo <https://zenodo.org/>`_, and you may click on the badge below to directly access the record associated with it. Note that this DOI refers to the package as such and always forwards to the most current version.
+To make things easier, UVVisPy has a `DOI <https://doi.org/10.5281/zenodo.5106817>`_ provided by `Zenodo <https://zenodo.org/>`_, and you may click on the badge below to directly access the record associated with it. Note that this DOI refers to the package as such and always forwards to the most current version.
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg
-   :target: https://doi.org/10.5281/zenodo.xxxxxxx
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5106817.svg
+   :target: https://doi.org/10.5281/zenodo.5106817
 
 
 Where to start

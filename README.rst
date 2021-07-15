@@ -1,8 +1,8 @@
 UVVisPy
 =======
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg
-   :target: https://doi.org/10.5281/zenodo.xxxxxxx
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5106817.svg
+   :target: https://doi.org/10.5281/zenodo.5106817
    :align: right
 
 The UVVisPy package provides tools for handling experimental data obtained using UV-visible (UVVis) absorption spectroscopy and is derived from the `ASpecD framework <https://www.aspecd.de/>`_. Due to inheriting from the ASpecD superclasses, all data generated with the UVVisPy package are completely reproducible and have a complete history.
