@@ -122,9 +122,9 @@ class TestShimadzuASCIIImporter(unittest.TestCase):
 
     def tearDown(self):
         if os.path.exists(self.dataset_file):
-           os.remove(self.dataset_file)
+            os.remove(self.dataset_file)
         if os.path.exists(self.metadata_file):
-           os.remove(self.metadata_file)
+            os.remove(self.metadata_file)
 
     def _write_dataset_file(self):
         with open(self.dataset_file, "w+") as f:

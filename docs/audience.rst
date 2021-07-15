@@ -23,3 +23,5 @@ Motivation and general ideas
 ============================
 
 The motivation an general idea behind the UVVisPy package is to ensure reproducibility and replicability for UVVis data processing, using the `ASpecD framework <https://www.aspecd.de/>`_.
+
+Furthermore, version 0.1.0 served as demonstration that completely implementing a comparably simple package as UVVisPy from scratch based on the ASpecD framework can be done within about 48 hours.
