@@ -90,6 +90,16 @@ class CreateAnalysisStepClasses(CreateClasses):
         ]
 
 
+class CreatePlotterClasses(CreateClasses):
+
+    def __init__(self):
+        super().__init__()
+        self.module = 'plotting'
+        self.classes = [
+            'SinglePlotter1D', 'MultiPlotter1D', 'MultiPlotter1DStacked',
+        ]
+
+
 if __name__ == "__main__":
-    creator = CreateAnalysisStepClasses()
+    creator = CreatePlotterClasses()
     creator.create_module()

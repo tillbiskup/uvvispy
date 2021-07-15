@@ -43,7 +43,7 @@ Features
 
 A list of features, not all implemented yet but aimed at for the first public release (uvvispy 0.1):
 
-* fully reproducible processing of UVVis data
+* fully reproducible processing and analysis of UVVis data
 
 * customisable plots
 

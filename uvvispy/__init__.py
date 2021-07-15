@@ -19,4 +19,7 @@ Available modules
 :mod:`uvvispy.analysis`
     Analysis steps operating on datasets
 
+:mod:`uvvispy.plotting`
+    Graphical representation of data in datasets
+
 """
