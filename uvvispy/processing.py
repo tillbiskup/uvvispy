@@ -107,6 +107,13 @@ class BaselineCorrection(aspecd.processing.BaselineCorrection):
     ASpecD documentation for the :class:`aspecd.processing.BaselineCorrection`
     class for details.
 
+    .. note::
+        There is only one difference to the ASpecD class: The area used for
+        fitting is by default only the ten percent from the right,
+        as optical spectra tend to have features towards the high-energy
+        short-wavelength end.
+
+
     Examples
     --------
     For convenience, a series of examples in recipe style (for details of
@@ -123,7 +130,7 @@ class BaselineCorrection(aspecd.processing.BaselineCorrection):
           type: BaselineCorrection
 
     In this case, a zeroth-order polynomial baseline will be subtracted from
-    your dataset using ten percent to the left and right, and in case of a
+    your dataset using ten percent to the right, and in case of a
     2D dataset, the baseline correction will be performed along the first
     axis (index zero) for all indices of the second axis (index 1).
 
@@ -142,6 +149,10 @@ class BaselineCorrection(aspecd.processing.BaselineCorrection):
              order: 1
 
     """
+
+    def __init__(self):
+        super().__init__()
+        self.parameters["fit_area"] = [0, 10]
 
 
 class Normalisation(aspecd.processing.Normalisation):

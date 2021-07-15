@@ -8,9 +8,7 @@ A few ideas how to develop the project further, currently a list as a reminder f
 For version 0.1
 ===============
 
-* Inherit processing and analysis steps from ASpecD
-
-* Modify :class:`BaselineCorrection` to take only area from right by default
+* Inherit analysis steps from ASpecD
 
 * Inherit plotters (and models) from ASpecD
 

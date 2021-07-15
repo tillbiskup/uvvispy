@@ -31,3 +31,7 @@ class TestProcessingStepsFromAspecd(unittest.TestCase):
                     aspecd_type = getattr(aspecd.processing, class_name)
                     obj = getattr(module, class_name)()
                     self.assertTrue(isinstance(obj, aspecd_type))
+
+    def test_baseline_correction_area_by_default_only_from_right(self):
+        processing = uvvispy.processing.BaselineCorrection()
+        self.assertEqual([0, 10], processing.parameters["fit_area"])
